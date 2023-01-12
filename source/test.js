@@ -12,3 +12,8 @@ const m = [3, 4, 5];
 const x = arithmetic.chineseRemainder(a, m);
 
 console.log('x', x);
+
+// Modular pow
+const c = arithmetic.modularPow(4, 13, 497);
+
+console.log('c', c);

@@ -108,3 +108,18 @@ module.exports.chineseRemainder = function chineseRemainderTheorem(a, m) {
         return 0;
     }
 };
+
+// Modular power
+// c = b exp(e) mod m
+module.exports.modularPow = function modularPow(base, exponent, modulus) {
+    if (modulus === 1) {
+        return 0;
+    }
+
+    let c = 1;
+    for (e = 0; e < exponent; e++) {
+        c = (c * base) % modulus;
+    }
+    
+    return c;
+};
